@@ -2,7 +2,7 @@
   "name": "uchedev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://UchechukwuUcheIke.github.io/{repo-name}",
+  "homepage": "http://UchechukwuUcheIke.github.io/uchedev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
