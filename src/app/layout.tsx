@@ -24,22 +24,24 @@ export default function RootLayout({
       <body className={inter.className}>
         <AppRouterCacheProvider>
           {/* AppBar is added to layout so it is shared among all pages */}
-          <AppBar> 
-            <Toolbar>
-              <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
-                UcheDev
-              </Typography>
-              
-                <Button color="inherit">
-                  Blogs
-                </Button>
-                <Button color="inherit">
-                  Projects
-                </Button>
-            </Toolbar>
-          </AppBar>
-          {children}
-          </AppRouterCacheProvider>
+            <AppBar> 
+              <Toolbar>
+                <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+                  UcheDev
+                </Typography>
+                
+                  <Button color="inherit" size="large">
+                    Blogs
+                  </Button>
+                  <Button color="inherit" size="large">
+                    Projects
+                  </Button>
+              </Toolbar>
+            </AppBar>
+            {/* Empty toolbar is added add spacing between AppBar and website contents */}
+            <Toolbar />
+            {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
