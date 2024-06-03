@@ -10,75 +10,93 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Stack direction="column" spacing={2} sx={{bgcolor: "#F5F3F3"}}>
-      <Paper component="main" sx={{ p: 3 }}>
+      <Paper component="main" elevation={0} sx={{ p: 3, bgcolor: "#990000"}}>
       <Stack
       direction="row"
       justifyContent="center"
       alignItems="center" 
-      spacing={5}>
-        <Stack direction="column" sx={{ flexGrow: 1 }}>
-        <Typography variant="h2">
-          Software Engineer
-        </Typography>
-        <Typography variant="h2">
-          Game Designer
-        </Typography>
-        <Typography variant="h2" sx={{ color: "#990000", fontWeight: 'bold' }}>
-          Game Developer
-        </Typography>
+      spacing={2}
+      >
+        <Stack 
+          direction="column" 
+          justifyContent="space-between"
+          alignItems="flex-start"
+          sx={{ flexGrow: 1 }}>
+          <Typography variant="h2" sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
+            Software Engineer
+          </Typography>
+          <Typography variant="h2" sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
+            Game Designer
+          </Typography>
+          <Typography variant="h1" sx={{ color: "#FFFFFF", fontWeight: 'bold' }}>
+            Game Developer
+          </Typography>
         </Stack>
         {/* Using Box with image component as a placeholder for MUI Image */}
         <Box
           component="img"
           sx={{
-            height: 233,
+            background: "#FFFFFF",
+            height: 500,
             width: 350,
-            flexGrow: 2,
+            flexGrow: 1,
             borderRadius: '50%'
           }}
-          alt="The house from the offer."
-          src="./portrait.jpg"
+          alt="Portrait of Uche"
+          src="/images/portrait.png"
         />
       </Stack>
     </Paper>
-    <Paper component="main" sx={{ p: 3 }}>
-      <Typography variant="h4">Latest Projects</Typography>
+    <Paper component="main" elevation={0}>
+      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
+        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>About Me</Typography>
+      </Box>
+
+    </Paper>
+    <Paper component="main" elevation={0}>
+      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
+        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>Latest Projects</Typography>
+      </Box>
       <Stack
         direction="row"
         justifyContent="flex-start"
-        spacing={2}>
+        spacing={2}
+        sx={{p: 3}}>
           {/* Placing dummy projects in for now */}
-          <Card>
+          <Card elevation={5}>
             <CardHeader
               title="Maverick Hunter X"
               subheader="June 1st, 2024"
+              sx={{}}
             />
             <CardMedia
               component="img"
-              height="194"
-              image="/static/images/cards/paella.jpg"
+              height="250"
+              image="/images/MaverickHunterX.png"
               alt="Paella dish"
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to cook
-                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                if you like.
+                A 2.5D remake of the SNES classic Megaman X, with improved visuals, storytelling, and atmosphere.
               </Typography>
             </CardContent>
           </Card>
       </Stack>
     </Paper>
-    <Paper component="main" sx={{ p: 3 }}>
-      <Typography variant="h4">Latest Blogs</Typography>
+
+    <Paper component="main">
+      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
+        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>Latest Blogs</Typography>
+      </Box>
       <Stack
         direction="row"
         justifyContent="flex-start"
-        spacing={2}>
-        <Card>
+        spacing={2}
+        sx={{p: 3}}>
+        <Card elevation={5}>
               <CardHeader
-                title="Megman X vs Zero"
-                subheader="September 14, 2016"
+                title="From Megman X to Zero: Leveling Up and Falling Short"
+                subheader="June 3rd, 2024"
               />
               <CardMedia
                 component="img"
