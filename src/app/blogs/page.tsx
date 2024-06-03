@@ -24,7 +24,7 @@ export default function Blogs() {
                             <CardMedia
                                 component="img"
                                 height="194"
-                                image="/static/images/cards/paella.jpg"
+                                image="../images/portrait.jpg"
                                 alt="Paella dish"
                                 />
                             <CardContent>

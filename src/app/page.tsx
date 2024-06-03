@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import portrait from "../images/portrait.jpg"
 
 import {AppBar, Toolbar, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent} from '@mui/material';
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Stack direction="column" spacing={2}>
+    <Stack direction="column" spacing={2} sx={{bgcolor: "#F5F3F3"}}>
       <Paper component="main" sx={{ p: 3 }}>
       <Stack
       direction="row"
@@ -22,7 +23,7 @@ export default function Home() {
         <Typography variant="h2">
           Game Designer
         </Typography>
-        <Typography variant="h2">
+        <Typography variant="h2" sx={{ color: "#990000", fontWeight: 'bold' }}>
           Game Developer
         </Typography>
         </Stack>
@@ -36,7 +37,7 @@ export default function Home() {
             borderRadius: '50%'
           }}
           alt="The house from the offer."
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2"
+          src="./portrait.jpg"
         />
       </Stack>
     </Paper>

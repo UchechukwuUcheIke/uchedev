@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import {AppBar, Toolbar, Typography, Button, Box} from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../theme';
 
 import { Inter } from "next/font/google";
 
@@ -22,16 +24,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{background: "#F5F3F3"}}>
         <AppRouterCacheProvider>
+
           {/* AppBar is added to layout so it is shared among all pages */}
+          <ThemeProvider theme={theme}>
             <AppBar> 
               <Toolbar>
                 <Typography 
                   variant="h3" 
                   component={Link}
                   href="/"
-                  sx={{ textDecoration: 'none', flexGrow: 1 }}>
+                  
+                  sx={{ textDecoration: 'none', flexGrow: 1, fontWeight: 'bold',
+                  '&:visited': {
+                    color: 'inherit'
+                  }
+                   }}>
                     UcheDev
                 </Typography>
                 <Button 
@@ -53,6 +62,7 @@ export default function RootLayout({
             {/* Empty toolbar is added add spacing between AppBar and website contents */}
             <Toolbar />
             {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
