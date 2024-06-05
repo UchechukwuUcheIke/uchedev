@@ -24,12 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{background:"#525c54"}}>
         <AppRouterCacheProvider>
 
           {/* AppBar is added to layout so it is shared among all pages */}
           <ThemeProvider theme={theme}>
-            <AppBar sx={{background: "#7D8C80"}}> 
+            <AppBar sx={{background: "#7D8C80", p:0}} elevation={0}> 
               <Toolbar>
                 <Typography 
                   variant="h3" 
@@ -47,14 +47,24 @@ export default function RootLayout({
                 color="inherit" 
                 size="large"
                 href="/projects"
-                LinkComponent={Link}>
+                LinkComponent={Link}
+                sx={{
+                  m:0,
+                  '&:hover': {
+                  backgroundColor: '#990000',
+                  boxShadow: 'none',
+                }}}>
                     Projects
                 </Button>
                 <Button 
                   color="inherit" 
                   size="large"
                   href="/blogs"
-                  LinkComponent={Link}>
+                  LinkComponent={Link}
+                  sx={{'&:hover': {
+                    backgroundColor: '#990000',
+                    boxShadow: 'none',
+                  }}}>
                     Blogs
                 </Button>
               </Toolbar>

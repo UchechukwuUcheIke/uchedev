@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import portrait from "../images/portrait.jpg"
 
-import {AppBar, Toolbar, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
+import {AppBar, Grid, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Stack direction="column" spacing={2} sx={{bgcolor: "#F5F3F3"}}>
-      <Paper component="main" elevation={0} sx={{ p: 3, bgcolor: "#525c54"}}>
+    <Stack direction="column" spacing={0}  sx={{padding: "0", margin: "0", bgcolor: "#F5F3F3"}}>
+      <Paper component="main" elevation={0} sx={{ p: 3,bgcolor: "#525c54", borderRadius: "0"}}>
       <Stack
       direction="row"
       justifyContent="center"
@@ -29,7 +29,7 @@ export default function Home() {
             And I'm a
           </Typography>
           <Typography variant="h2" sx={{ color: "#FFFFFF", fontWeight: 'bold' }}>
-            Game Developer
+            Game <span style={{color:"#990000"}}>Developer</span>
           </Typography>
         </Stack>
         {/* Using Box with image component as a placeholder for MUI Image */}
@@ -46,32 +46,36 @@ export default function Home() {
           src="/images/portrait.png"
         />
       </Stack>
-      <Stack>
-        <Button>
-          Linked In
+      <Stack direction="row" spacing={2}>
+        <Button sx={{bgcolor: "#990000", color: "#FFFFFF"}} size="large">
+          LinkedIn
         </Button>
-        <Button>
+        <Button sx={{bgcolor: "#990000", color: "#FFFFFF"}} size="large">
           Resume
         </Button>
       </Stack>
     </Paper>
-    <Paper component="main" elevation={0} sx={{background: "#525c54"}}>
-      <Box sx={{ marginBottom : 3,  p: 3}}>
+    <Paper component="main" elevation={0} sx={{background: "#FFFFFF", borderRadius: "0"}}>
+      <Box sx={{ marginBottom : 3,  p: 3, background: "#525c54"}}>
         <Typography variant="h4" sx={{fontWeight: 'bold'}}>About Me</Typography>
       </Box>
 
     </Paper>
-    <Paper component="main" elevation={0} sx={{background: "#525c54"}}>
-      <Stack>
-      <Box sx={{ marginBottom : 3, p: 3}}>
-        <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Projects</Typography>
-      </Box>
-      <Stack
-        direction="row"
-        justifyContent="flex-start"
-        spacing={2}
-        sx={{p: 3}}>
-          {/* Placing dummy projects in for now */}
+    
+  </Stack>
+  );
+}
+/**
+ * <Paper elevation={0} sx={{p: 2, background: "#525c54", borderRadius: "0"}}>
+      <Grid container spacing={20}>
+        <Grid xs={6}>
+          <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Projects</Typography>
+        </Grid>
+        <Grid  xs={6}>
+          <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Blogs</Typography>
+        </Grid>
+        <Grid  xs={6}>
+
           <Card elevation={5}>
             <CardHeader
               title="Maverick Hunter X"
@@ -90,20 +94,9 @@ export default function Home() {
               </Typography>
             </CardContent>
           </Card>
-      </Stack>
-      </Stack>
-    </Paper>
-
-    <Paper component="main"  sx={{background: "#525c54"}}>
-      <Box sx={{ marginBottom : 3, p: 3}}>
-        <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Blogs</Typography>
-      </Box>
-      <Stack
-        direction="row"
-        justifyContent="flex-start"
-        spacing={2}
-        sx={{p: 3}}>
-        <Card elevation={5}>
+        </Grid>
+        <Grid  xs={6}>
+          <Card elevation={5}>
               <CardHeader
                 title="From Megman X to Zero: Leveling Up and Falling Short"
                 subheader="June 3rd, 2024"
@@ -121,9 +114,8 @@ export default function Home() {
                   if you like.
                 </Typography>
               </CardContent>
-            </Card>
-      </Stack>
+          </Card>
+        </Grid>
+      </Grid>
     </Paper>
-  </Stack>
-  );
-}
+ */
