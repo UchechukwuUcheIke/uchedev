@@ -24,12 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{background: "#F5F3F3"}}>
+      <body className={inter.className}>
         <AppRouterCacheProvider>
 
           {/* AppBar is added to layout so it is shared among all pages */}
           <ThemeProvider theme={theme}>
-            <AppBar> 
+            <AppBar sx={{background: "#7D8C80"}}> 
               <Toolbar>
                 <Typography 
                   variant="h3" 

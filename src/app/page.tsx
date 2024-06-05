@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import portrait from "../images/portrait.jpg"
 
-import {AppBar, Toolbar, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent} from '@mui/material';
+import {AppBar, Toolbar, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Stack direction="column" spacing={2} sx={{bgcolor: "#F5F3F3"}}>
-      <Paper component="main" elevation={0} sx={{ p: 3, bgcolor: "#990000"}}>
+      <Paper component="main" elevation={0} sx={{ p: 3, bgcolor: "#525c54"}}>
       <Stack
       direction="row"
       justifyContent="center"
@@ -22,13 +22,13 @@ export default function Home() {
           justifyContent="space-between"
           alignItems="flex-start"
           sx={{ flexGrow: 1 }}>
-          <Typography variant="h2" sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
-            Software Engineer
+          <Typography variant="h1" sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
+            Hi, I'm Uche
           </Typography>
           <Typography variant="h2" sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
-            Game Designer
+            And I'm a
           </Typography>
-          <Typography variant="h1" sx={{ color: "#FFFFFF", fontWeight: 'bold' }}>
+          <Typography variant="h2" sx={{ color: "#FFFFFF", fontWeight: 'bold' }}>
             Game Developer
           </Typography>
         </Stack>
@@ -46,16 +46,25 @@ export default function Home() {
           src="/images/portrait.png"
         />
       </Stack>
+      <Stack>
+        <Button>
+          Linked In
+        </Button>
+        <Button>
+          Resume
+        </Button>
+      </Stack>
     </Paper>
-    <Paper component="main" elevation={0}>
-      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
-        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>About Me</Typography>
+    <Paper component="main" elevation={0} sx={{background: "#525c54"}}>
+      <Box sx={{ marginBottom : 3,  p: 3}}>
+        <Typography variant="h4" sx={{fontWeight: 'bold'}}>About Me</Typography>
       </Box>
 
     </Paper>
-    <Paper component="main" elevation={0}>
-      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
-        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>Latest Projects</Typography>
+    <Paper component="main" elevation={0} sx={{background: "#525c54"}}>
+      <Stack>
+      <Box sx={{ marginBottom : 3, p: 3}}>
+        <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Projects</Typography>
       </Box>
       <Stack
         direction="row"
@@ -82,11 +91,12 @@ export default function Home() {
             </CardContent>
           </Card>
       </Stack>
+      </Stack>
     </Paper>
 
-    <Paper component="main">
-      <Box sx={{ marginBottom : 3, background: "#C3C3C3", p: 3}}>
-        <Typography variant="h4" sx={{color: "#990000", fontWeight: 'bold'}}>Latest Blogs</Typography>
+    <Paper component="main"  sx={{background: "#525c54"}}>
+      <Box sx={{ marginBottom : 3, p: 3}}>
+        <Typography variant="h4" sx={{fontWeight: 'bold'}}>Latest Blogs</Typography>
       </Box>
       <Stack
         direction="row"
