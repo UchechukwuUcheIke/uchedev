@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
-import portrait from "../images/portrait.jpg"
-
-import {AppBar, Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
+import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
@@ -29,18 +27,18 @@ export default function Home() {
             sx={{ flexGrow: 1}}>
             <Typography 
               variant="h1" 
-              sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
+              sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
               Hi, I'm Uche
             </Typography>
             <Typography 
               variant="h2" 
-              sx={{ color: "#EEEEEE", fontWeight: 'bold' }}>
+              sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
               and I'm a
             </Typography>
             <Typography 
               variant="h2" 
-              sx={{ color: "#FFFFFF", fontWeight: 'bold' }}>
-              Game <Typography variant="solid" color="#990000" noWrap>Developer</Typography>
+              sx={{ color: "#FFFFFF", fontWeight: "bold" }}>
+              Game <span style={{color: "#990000"}}>Developer</span>
             </Typography>
             <Stack 
               direction="row" 
