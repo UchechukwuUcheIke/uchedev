@@ -22,7 +22,63 @@ const theme = createTheme({
         background: {
             default: "#000"
         },
-    }
+    },
+    components: {
+        MuiAppBar: {
+          styleOverrides: {
+            root: {
+                background: "#7D8C80", 
+                p:0
+            },
+          },
+        },
+        MuiButton: {
+            styleOverrides: {
+              root: {
+                backgroundColor: "#7D8C80",
+                color: "#FFFFFF",
+                p:0,
+                m:0,
+                '&:hover': {
+                    backgroundColor: '#990000',
+                    boxShadow: 'none',
+                }
+              },
+            },
+          },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    textDecoration: 'none',
+                },
+              },
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 0,
+                },
+            },
+        },
+        MuiStack: {
+            styleOverrides: {
+                root: {
+                    padding:0,
+                    margin:0
+                },
+            },
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    background: "#F5F5F5",
+                    borderRadius: 0, 
+                    boxShadow: "10px 10px #990000"
+                },
+            },
+        }
+        // Other component overrides
+    },
   
 });
 
