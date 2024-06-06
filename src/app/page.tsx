@@ -28,12 +28,12 @@ export default function Home() {
             <Typography 
               variant="h1" 
               sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-              Hi, I'm Uche
+              Hi, I&apos;m Uche
             </Typography>
             <Typography 
               variant="h2" 
               sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-              and I'm a
+              and I&apos;m a
             </Typography>
             <Typography 
               variant="h2" 
