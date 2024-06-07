@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import "./page.css"
-import {Button, Typography, Stack, Paper, Card, CardHeader, CardMedia, CardContent} from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import {Button, Typography, Stack, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea} from '@mui/material';
+import Link from "next/link";
+
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
@@ -16,7 +17,32 @@ export default function Blogs() {
                 </Typography>
                 {/**Using CSS grids cause MUI's grid suck */}
                 <div className="grid-container">
-                    <Card className="featured-item">
+                    <Card className="featured-item"
+                        elevation={0}
+                        component={Link}
+                        href="/blogs/megaman-x-vs-zero"
+                        >
+                        <CardActionArea>
+                            <CardHeader
+                                title="From Megman X to Zero: Leveling Up and Falling Short"
+                                subheader="June 3rd, 2024"
+                                />
+                            <CardMedia
+                                component="img"
+                                height="194"
+                                image="../images/portrait.jpg"
+                                alt="Paella dish"
+                                />
+                            <CardContent>
+                                <Typography variant="body2" color="text.secondary">
+                                    Lorem ipsum
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+
+                    <Card
+                        elevation={0}>
                         <CardHeader
                             title="Maverick Hunter X"
                             subheader="June 1st, 2024"
@@ -29,14 +55,13 @@ export default function Blogs() {
                             />
                         <CardContent>
                             <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
+                                Lorem ipsum
                             </Typography>
                         </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card
+                    elevation={0}>
                         <CardHeader
                             title="Maverick Hunter X"
                             subheader="June 1st, 2024"
@@ -49,14 +74,13 @@ export default function Blogs() {
                             />
                         <CardContent>
                             <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
+                                Lorem ipsum
                             </Typography>
                         </CardContent>
                     </Card>
 
-                    <Card>
+                    <Card
+                        elevation={0}>
                         <CardHeader
                             title="Maverick Hunter X"
                             subheader="June 1st, 2024"
@@ -69,29 +93,7 @@ export default function Blogs() {
                             />
                         <CardContent>
                             <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-
-                    <Card>
-                        <CardHeader
-                            title="Maverick Hunter X"
-                            subheader="June 1st, 2024"
-                            />
-                        <CardMedia
-                            component="img"
-                            height="194"
-                            image="../images/portrait.jpg"
-                            alt="Paella dish"
-                            />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
+                                Lorem ipsum
                             </Typography>
                         </CardContent>
                     </Card>

@@ -50,6 +50,9 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     textDecoration: 'none',
+                    '&:visited': {
+                            color: 'inherit'
+                    },
                 },
               },
         },
@@ -72,8 +75,17 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     background: "#F2F2F2",
-                    borderRadius: 0, 
-                    boxShadow: "10px 10px #990000"
+                    borderRadius: 0,
+                    boxShadow: "0px",
+                    '&:hover': {
+                        boxShadow: "10px 10px #990000",
+                        transform: 1.3
+                    },
+                    '&:visited': {
+                            color: 'inherit'
+                    },
+                    //boxShadow: "10px 10px #990000",
+                    textDecoration: 'none'
                 },
             },
         }

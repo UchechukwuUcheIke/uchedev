@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, Button} from '@mui/material';
+import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
 
-export default function Home() {
+export default function Blogs() {
   return (
     <Stack 
       direction="column"
@@ -139,6 +139,7 @@ export default function Home() {
       alignItems="center">
       <Card 
         elevation={0}>
+          <CardActionArea>
             <CardHeader
               title="Maverick Hunter X"
               subheader="June 1st, 2024"
@@ -155,7 +156,8 @@ export default function Home() {
                 A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
               </Typography>
             </CardContent>
-          </Card>
+          </CardActionArea>
+        </Card>
       </Stack>
     </Paper>
     

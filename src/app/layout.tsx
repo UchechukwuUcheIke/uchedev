@@ -36,12 +36,8 @@ export default function RootLayout({
                   variant="h3" 
                   component={Link}
                   href="/"
-                  sx={{  flexGrow: 1, fontWeight: 'bold',
-                  '&:visited': {
-                    color: 'inherit'
-                  }
-                   }}>
-                    UcheDev
+                  sx={{  flexGrow: 1, fontWeight: 'bold'}}>
+                    Uche<span style={{color: "#990000"}}>Dev</span>
                 </Typography>
                 <Button 
                 size="large"
