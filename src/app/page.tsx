@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
 import ContentCard from '@/ContentCard';
 import Image from 'next/image'
+
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
