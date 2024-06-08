@@ -13,7 +13,6 @@ interface ContentCardProps {
     children: string
 };
 
-
 function ContentCard({title, subheader, imageURL, imageAlt, children }: ContentCardProps) {
     return (
         <Card 
