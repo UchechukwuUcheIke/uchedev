@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 //TODO: Create react component for Blogs/Project cards so we don't repeat so much code
 
-function ContentCard({title, subheader, imageURL, imageAlt, children }) {
+function ContentCard({title, subheader, imageURL, imageAlt, children }: 
+    {title: string, subheader: string, imageURL: string, imageAlt: string, children: string}) {
     return (
         <Card 
         elevation={0}>
@@ -29,13 +30,5 @@ function ContentCard({title, subheader, imageURL, imageAlt, children }) {
         </Card>
     )
 }
-
-ContentCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    subheader: PropTypes.string,
-    imageURL: PropTypes.string,
-    imageAlt: PropTypes.string,
-    children: PropTypes.string
-};
 
 export default ContentCard
