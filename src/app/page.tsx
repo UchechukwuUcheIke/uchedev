@@ -70,7 +70,7 @@ export default function Blogs() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src="uchedev/images/portrait.png"
+            src="uchechukwuucheike.github.io/uchedev/images/portrait.png"
           />
           
         </Stack>
