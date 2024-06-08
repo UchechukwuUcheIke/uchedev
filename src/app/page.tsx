@@ -4,12 +4,15 @@ import ContentCard from '@/ContentCard';
 import Image from 'next/image'
 
 //import { basePath } from '../config.js';
+import config from "../config.js"
+
 
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
 
 export default function Blogs() {
+  console.log("base path:", config.basePath)
   return (
     <Stack 
       direction="column"
@@ -70,7 +73,7 @@ export default function Blogs() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src="/uchedev/images/portrait.png"
+            src={config.basePath + "/images/portrait.png"}
           />
           
         </Stack>
