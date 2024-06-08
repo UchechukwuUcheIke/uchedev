@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
-
+import ContentCard from '@/ContentCard';
+import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
@@ -57,6 +58,7 @@ export default function Blogs() {
             </Stack>
           </Stack>
           {/* Using Box with image component as a placeholder for MUI Image */}
+          {/* Look into replacing the Box with Next.js' Image component */}
           <Box
             component="img"
             sx={{
@@ -67,6 +69,7 @@ export default function Blogs() {
             alt="Portrait of Uche"
             src="/images/portrait.png"
           />
+          
         </Stack>
 
       </Paper>
@@ -104,24 +107,13 @@ export default function Blogs() {
         direction="row"
         justifyContent="flex-start"
         alignItems="center">
-      <Card 
-        elevation={0}>
-              <CardHeader
-                title="From Megman X to Zero: Leveling Up and Falling Short"
-                subheader="June 3rd, 2024"
-              />
-              <CardMedia
-                component="img"
-                height="194"
-                image="/static/images/cards/paella.jpg"
-                alt="Paella dish"
-              />
-              <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                  Analysis of Megaman X and Megaman Zero games
-                </Typography>
-              </CardContent>
-          </Card>
+        <ContentCard
+          title="From Megman X to Zero: Leveling Up and Falling Short"
+          subheader="June 3rd, 2024"
+          imageURL={"/images/MaverickHunterX.png"}
+          imageAlt={"From Megman X to Zero Thumbnail"}>
+            Analysis of Megaman X and Megaman Zero games
+        </ContentCard>
       </Stack>
     </Paper>
     <Divider orientation="horizontal" variant="middle" flexItem />
@@ -132,33 +124,20 @@ export default function Blogs() {
         alignItems="center">
         <Typography variant="h4" sx={{flexGrow: 1, marginBottom: 2, fontWeight: 'bold'}}>Latest Projects</Typography>
         <Typography variant="h5" sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>See All</Typography>
-      </Stack>
-      <Stack
+    </Stack>
+    <Stack
       direction="row"
       justifyContent="flex-start"
-      alignItems="center">
-      <Card 
-        elevation={0}>
-          <CardActionArea>
-            <CardHeader
-              title="Maverick Hunter X"
-              subheader="June 1st, 2024"
-              sx={{flexGrow: 1}}
-            />
-            <CardMedia
-              component="img"
-              height="250"
-              image="/images/MaverickHunterX.png"
-              alt="Paella dish"
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Stack>
+      alignItems="center"
+      spacing={2}>
+      <ContentCard
+          title="Maverick Hunter X"
+          subheader="June 1st, 2024"
+          imageURL={"/images/MaverickHunterX.png"}
+          imageAlt={"Maverick Hunter X Logo"}>
+            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
+      </ContentCard>
+    </Stack>
     </Paper>
     
   </Stack>

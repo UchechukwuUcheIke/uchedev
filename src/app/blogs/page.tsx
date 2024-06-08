@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import "./page.css"
 import {Button, Typography, Stack, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea} from '@mui/material';
 import Link from "next/link";
+import ContentCard from '@/ContentCard';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
@@ -41,62 +42,28 @@ export default function Blogs() {
                         </CardActionArea>
                     </Card>
 
-                    <Card
-                        elevation={0}>
-                        <CardHeader
-                            title="Maverick Hunter X"
-                            subheader="June 1st, 2024"
-                            />
-                        <CardMedia
-                            component="img"
-                            height="194"
-                            image="../images/portrait.jpg"
-                            alt="Paella dish"
-                            />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                Lorem ipsum
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                    <ContentCard
+                        title="Maverick Hunter X"
+                        subheader="June 1st, 2024"
+                        imageURL={"/images/MaverickHunterX.png"}
+                        imageAlt={"Maverick Hunter X Logo"}>
+                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
+                    </ContentCard>
 
-                    <Card
-                    elevation={0}>
-                        <CardHeader
-                            title="Maverick Hunter X"
-                            subheader="June 1st, 2024"
-                            />
-                        <CardMedia
-                            component="img"
-                            height="194"
-                            image="../images/portrait.jpg"
-                            alt="Paella dish"
-                            />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                Lorem ipsum
-                            </Typography>
-                        </CardContent>
-                    </Card>
-
-                    <Card
-                        elevation={0}>
-                        <CardHeader
-                            title="Maverick Hunter X"
-                            subheader="June 1st, 2024"
-                            />
-                        <CardMedia
-                            component="img"
-                            height="194"
-                            image="../images/portrait.jpg"
-                            alt="Paella dish"
-                            />
-                        <CardContent>
-                            <Typography variant="body2" color="text.secondary">
-                                Lorem ipsum
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                    <ContentCard
+                        title="Maverick Hunter X"
+                        subheader="June 1st, 2024"
+                        imageURL={"/images/MaverickHunterX.png"}
+                        imageAlt={"Maverick Hunter X Logo"}>
+                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
+                    </ContentCard>
+                    <ContentCard
+                        title="Maverick Hunter X"
+                        subheader="June 1st, 2024"
+                        imageURL={"/images/MaverickHunterX.png"}
+                        imageAlt={"Maverick Hunter X Logo"}>
+                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
+                    </ContentCard>
                 </div>
             </Stack>
         </Paper>
