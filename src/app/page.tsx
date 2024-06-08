@@ -3,6 +3,8 @@ import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, Car
 import ContentCard from '@/ContentCard';
 import Image from 'next/image'
 
+//import { basePath } from '../config.js';
+
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
@@ -68,7 +70,7 @@ export default function Blogs() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src="/images/portrait.png"
+            src="uchedev/images/portrait.png"
           />
           
         </Stack>
