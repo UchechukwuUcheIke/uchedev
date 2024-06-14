@@ -3,10 +3,6 @@ import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, Car
 import ContentCard from '@/ContentCard';
 import Image from 'next/image'
 
-//import { basePath } from '../config.js';
-import config from "../config.js"
-
-
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
