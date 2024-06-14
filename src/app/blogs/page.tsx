@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 
 export default function Blogs() {
+    const basePath = process.env.BASE_PATH
     return (
         <Paper component="main" sx={{padding: 2 }}>
             <Stack direction="column" spacing={2} >
@@ -21,7 +22,7 @@ export default function Blogs() {
                     <Card className="featured-item"
                         elevation={0}
                         component={Link}
-                        href="/blogs/megaman-x-vs-zero"
+                        href="/blog/megaman-x-vs-zero"
                         >
                         <CardActionArea>
                             <CardHeader
@@ -31,7 +32,7 @@ export default function Blogs() {
                             <CardMedia
                                 component="img"
                                 height="194"
-                                image="../images/portrait.jpg"
+                                image={basePath + "/images/portrait.jpg"}
                                 alt="Paella dish"
                                 />
                             <CardContent>
@@ -41,29 +42,6 @@ export default function Blogs() {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-
-                    <ContentCard
-                        title="Maverick Hunter X"
-                        subheader="June 1st, 2024"
-                        imageURL={"/images/MaverickHunterX.png"}
-                        imageAlt={"Maverick Hunter X Logo"}>
-                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
-                    </ContentCard>
-
-                    <ContentCard
-                        title="Maverick Hunter X"
-                        subheader="June 1st, 2024"
-                        imageURL={"/images/MaverickHunterX.png"}
-                        imageAlt={"Maverick Hunter X Logo"}>
-                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
-                    </ContentCard>
-                    <ContentCard
-                        title="Maverick Hunter X"
-                        subheader="June 1st, 2024"
-                        imageURL={"/images/MaverickHunterX.png"}
-                        imageAlt={"Maverick Hunter X Logo"}>
-                            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
-                    </ContentCard>
                 </div>
             </Stack>
         </Paper>

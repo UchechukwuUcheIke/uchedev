@@ -11,8 +11,9 @@ export const metadata: Metadata = {
   title: 'Uchedev',
 }
 
-export default function Blogs() {
-  console.log("base path:", config.basePath)
+export default function Homepage() {
+  // accessing the basepath through env variable so images appear when website is deployed
+  const basePath = process.env.BASE_PATH
   return (
     <Stack 
       direction="column"
@@ -25,8 +26,7 @@ export default function Blogs() {
         direction="row"
         justifyContent="center"
         alignItems="flex-end"
-        spacing={2}
-        >
+        spacing={2}>
           <Stack 
             direction="column"
             justifyContent="flex-end"
@@ -73,7 +73,7 @@ export default function Blogs() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src={config.basePath + "/images/portrait.png"}
+            src={basePath + "/images/portrait.png"}
           />
           
         </Stack>
@@ -116,7 +116,7 @@ export default function Blogs() {
         <ContentCard
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
-          imageURL={"/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MaverickHunterX.png"}
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games
         </ContentCard>
@@ -139,7 +139,7 @@ export default function Blogs() {
       <ContentCard
           title="Maverick Hunter X"
           subheader="June 1st, 2024"
-          imageURL={"/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MaverickHunterX.png"}
           imageAlt={"Maverick Hunter X Logo"}>
             A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
       </ContentCard>
