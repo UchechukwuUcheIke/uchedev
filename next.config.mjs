@@ -14,4 +14,4 @@ const withMDX = createMDX({
 })
  
 // Wrap MDX and Next.js config with each other
-export default nextConfig
+export default withMDX(nextConfig);
