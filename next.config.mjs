@@ -1,11 +1,12 @@
-import withMDX from '@next/mdx'
-
-/** @type {import('next').NextConfig} */
+// @ts-check
+ 
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
+  output: 'export',
   // Configure `pageExtensions`` to include MDX files
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
 }
  
-// Wrap MDX and Next.js config with each other
-export default withMDX(nextConfig);
+export default nextConfig
