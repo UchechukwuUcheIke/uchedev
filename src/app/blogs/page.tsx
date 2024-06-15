@@ -32,7 +32,7 @@ export default function Blogs() {
                             <CardMedia
                                 component="img"
                                 height="194"
-                                image={basePath + "/images/portrait.jpg"}
+                                image={basePath + "images/portrait.jpg"}
                                 alt="Paella dish"
                                 />
                             <CardContent>
