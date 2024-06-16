@@ -112,7 +112,7 @@ export default function Homepage() {
         <ContentCard
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
-          imageURL={basePath + "/images/MaverickHunterX.png"}
+          imageURL={"/" + basePath + "/images/MaverickHunterX.png"}
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games
         </ContentCard>
@@ -135,7 +135,7 @@ export default function Homepage() {
       <ContentCard
           title="Maverick Hunter X"
           subheader="June 1st, 2024"
-          imageURL={basePath + "/images/MaverickHunterX.png"}
+          imageURL={"/" + basePath + "/images/MaverickHunterX.png"}
           imageAlt={"Maverick Hunter X Logo"}>
             A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
       </ContentCard>
