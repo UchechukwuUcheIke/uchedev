@@ -69,7 +69,7 @@ export default function Homepage() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src="/uchedev/images/portrait.png"
+            src={basePath + "/images/portrait.png"}
           />
           
         </Stack>
@@ -112,7 +112,7 @@ export default function Homepage() {
         <ContentCard
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
-          imageURL={"uchedev/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MaverickHunterX.png"}
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games
         </ContentCard>
