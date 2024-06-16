@@ -69,7 +69,7 @@ export default function Homepage() {
               flexGrow: 1,
             }}
             alt="Portrait of Uche"
-            src={`/images/portrait.png`}
+            src={`/uchedev/images/portrait.png`}
           />
           
         </Stack>
