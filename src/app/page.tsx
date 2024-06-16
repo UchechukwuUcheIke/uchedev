@@ -122,7 +122,6 @@ export default function Homepage() {
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
           imageURL={basePath + "/images/MaverickHunterX.png"}
-          component={Link}
           href="/blog/megaman-x-vs-zero"
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games

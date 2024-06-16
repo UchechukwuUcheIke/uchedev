@@ -1,6 +1,7 @@
 import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
 import React, { Component, ElementType } from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 //TODO: Create react component for Blogs/Project cards so we don't repeat so much code
 
@@ -11,16 +12,15 @@ interface ContentCardProps {
     imageURL: string,
     imageAlt: string,
     children: string,
-    component?: ElementType,
     href?: string,
 };
 
-function ContentCard({title, subheader, imageURL, imageAlt, component, href, children }: ContentCardProps) {
+function ContentCard({title, subheader, imageURL, imageAlt, href, children }: ContentCardProps) {
     return (
         <Card 
         elevation={0}
-        component={component}
-        href={href}>
+        component={Link}
+        href={href || ""}>
         <CardActionArea>
             <CardHeader
             title={title}
