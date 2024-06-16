@@ -86,24 +86,36 @@ export default function Article() {
         flexGrow: 1,
         paddingX: "25%"
       }}
-      alt="Bad Level Design in MMZ"
+      alt="Good Level Design in MMX"
       src={basePath + "/assets/blogs/megaman-x-vs-zero/hotariongoodleveldesign.png"}
     />
-      <Markdown>{seventhSection}</Markdown>
+    <Markdown>{seventhSection}</Markdown>
+      <Box
+      component="img"
+      sx={{
+        width:"50%",
+        height:"100",
+        flexGrow: 1,
+        paddingX: "25%"
+      }}
+      alt="Bad Level Design in MMZ"
+      src={basePath + "/assets/blogs/megaman-x-vs-zero/serges_bossfight.png"}
+      />
+    <Markdown>{eighthSection}</Markdown>
     </Fragment>
   )
 }
 
 let header = 
 `
-##### June 3rd, 2024 | Written by Uchechukwu Uche-Ike
+##### June 10th, 2024 | Written by Uchechukwu Uche-Ike
 
 # From Megaman X to Zero: Leveling Up Yet Falling Short
 `
 
 let firstSection = 
 `
-Spiritual successors in media have an awkward void to fill. Not only is a spiritual successor expected to revolutionize the established formula, but it also lives under constant comparison to its beloved predecessor. In this retrospective, I want to explore the Megaman X series, one of my favorite games of all time, and its spiritual successor in Megaman Zero 1, and see how they measure against one another.
+Spiritual successors in media have an awkward void to fill. Not only is a spiritual successor expected to revolutionize the established formula, but it also lives under constant comparison to its beloved predecessor. This idea is no different in gaming. In this retrospective, I want to explore the Megaman X series, one of my favorite game franchises of all time, and its spiritual successor in Megaman Zero, and see how they measure against one another.
 
 Set a century after the original Megaman series, Megaman X throws the player amid the Maverick Wars: a conflict between Mavericks – robots that have gone rogue against humans – and Maverick Hunters – a police force formed to combat the Maverick uprising. 
 `
@@ -149,4 +161,14 @@ let seventhSection=
 `
 Megaman X1 introduces the player to the Hotarion in a safe environment, where getting hit by a Hotarion does not result in death. This safety net is gone for subsequent jumps, but at that point, the player is more than familiar with the task ahead of them. The section becomes a puzzle of positing yourself and timing shots correctly to protect yourself from the Hotarions. The factor of level design structure makes the difference between an infuriating level design and an engaging one.
 
+Beyond the changes in level design, one difference between the two series I was disappointed to see was the subtle de-emphasis on precision platforming. As I stated before, the quality I loved most about the X series was its unique blend of platforming, combat, and movements; no boss fight exemplifies this more than the Serges boss in Megaman X2. 
+`
+
+let eighthSection =
+`
+The player has to defeat Serges while managing their height between several platforms, switching between platforms to dodge attacks and firing off shots to keep the pressure on. It's daunting, it's frustrating, but it's such a satisfying puzzle to unravel.
+
+In contrast, boss encounters in Megaman Zero are fought on a more 1-dimensional plane where the player is closer to the boss on average. This restructuring has merit: it forces the player to become more intimate with the boss' attack patterns. Rather than retreating to a platform or a wall, the player is forced to dash under or jump over an enemy, which is an interesting puzzle in its own right. I wouldn't put one combat style over the other, but I wish Megaman Zero leaned more toward the X series in this respect.
+
+All in all, Megaman Zero is a worthy successor to the X series. Megaman Zero retains the core mechanics of the Megaman X series while introducing a rich narrative and a much-appreciated overhaul to combat. Though it fails to emulate the design genius of its predecessor, the Megaman Zero series solidifies a unique identity among the Megaman spinoff games that allows it to stand on its own.
 `
