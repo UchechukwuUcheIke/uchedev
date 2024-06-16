@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
-import ContentCard from '@/ContentCard';
+import ContentCard from './ContentCard'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -112,7 +112,7 @@ export default function Homepage() {
         <ContentCard
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
-          imageURL={"/" + basePath + "/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MaverickHunterX.png"}
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games
         </ContentCard>
@@ -135,7 +135,7 @@ export default function Homepage() {
       <ContentCard
           title="Maverick Hunter X"
           subheader="June 1st, 2024"
-          imageURL={"/" + basePath + "/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MaverickHunterX.png"}
           imageAlt={"Maverick Hunter X Logo"}>
             A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
       </ContentCard>
