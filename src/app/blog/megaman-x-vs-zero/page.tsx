@@ -124,7 +124,7 @@ let secondSection =
 `
 Formula-wise, the Megaman X games borrow many elements synonymous with the classic Megaman series. The run-and-gun gameplay is all there, you still fight 8 bosses and acquire their special weapons, but what set the Megaman X series apart from its classic series counterpart were the mechanics introduced in the games. The introduction of the "dash" mechanic added so much depth to the movement options of the game, not only giving the player faster ground movement, but also a means of evading attacks, adjusting positioning, ducking under fire, and platforming. This mechanic transformed Megaman from a slow run-and-gun game to a dynamic platformer with an engaging blend of combat and precision platforming.
 
-### New Kid on the block
+### The New Kid On The Block
 `
 
 let thirdSection =
@@ -143,7 +143,7 @@ let fifthSection =
 `
 Megaman Zero's triumphs go beyond story and aesthetics, as the installment revolutionizes the Megman formula by abandoning the special weapons acquired from defeating each boss in favor of an arsenal of weapons that Zero slowly accumulates throughout the game's run. I had never been a fan of the special weapons in the X series - seldom using them except for grabbing a weapon upgrade or sub-tank. Unlike the special weapons of the X series, Zero's weapons are versatile, and I found myself switching between Zero's arsenal to adapt to different situations. For example, one may opt for the Z-Saber for raw damage output, favor the Triple Rod to attack enemies from multiple vantage points or use the Shield Boomerang to protect against a barrage of enemy fire. At its pinnacle, combat in Megaman Zero reaches heights well above the Megaman X series.
 
-### Dropping the ball
+### Dropping The Ball
 
 To compensate for the enhanced combat capabilities, the Zero series is noticeably more challenging than the X series. Bosses have more health and dangerous movement patterns and attacks, which players should be able to make short work of with intelligent positioning and attacks.
 
