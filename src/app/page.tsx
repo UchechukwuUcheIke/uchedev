@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
+import {Divider, Typography, Stack, Box, Paper,  Button} from '@mui/material';
 import ContentCard from './ContentCard'
 import Link from "next/link";
 import Image from 'next/image'
@@ -119,9 +119,9 @@ export default function Homepage() {
         justifyContent="flex-start"
         alignItems="center">
         <ContentCard
-          title="From Megman X to Zero: Leveling Up and Falling Short"
+          title="From Megman X to Zero: Leveling Up Yet Falling Short"
           subheader="June 3rd, 2024"
-          imageURL={basePath + "/images/MaverickHunterX.png"}
+          imageURL={basePath + "/images/MegamanXVsZero.png"}
           href="/blog/megaman-x-vs-zero"
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games

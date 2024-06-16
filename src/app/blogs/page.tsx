@@ -26,18 +26,18 @@ export default function Blogs() {
                         >
                         <CardActionArea>
                             <CardHeader
-                                title="From Megman X to Zero: Leveling Up and Falling Short"
+                                title="From Megman X to Zero: Leveling Up Yet Falling Short"
                                 subheader="June 3rd, 2024"
                                 />
                             <CardMedia
                                 component="img"
                                 height="194"
-                                image={basePath + "/images/portrait.jpg"}
-                                alt="Paella dish"
+                                image={basePath + "/images/MegamanXvsZero.png"}
+                                alt="Megaman X vs Zero thumbnail"
                                 />
                             <CardContent>
                                 <Typography variant="body2" color="text.secondary">
-                                    Lorem ipsum
+                                    Analysis of Megaman X and Megaman Zero games
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
