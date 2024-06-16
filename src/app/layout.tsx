@@ -40,9 +40,8 @@ export default function RootLayout({
                     Uche<span style={{color: "#990000"}}>Dev</span>
                 </Typography>
                 <Button 
-                size="large"
-                href="/projects"
-                LinkComponent={Link}>
+                size="large">
+                {/**TODO: Add linking for Projects page */}
                     Projects
                 </Button>
                 <Button 

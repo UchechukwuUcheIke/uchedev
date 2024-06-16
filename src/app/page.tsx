@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import {Divider, Typography, Stack, Box, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea, Button} from '@mui/material';
 import ContentCard from './ContentCard'
+import Link from "next/link";
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -49,6 +50,8 @@ export default function Homepage() {
               sx={{flexGrow: 1, marginTop: 10, marginBottom: 2}}>
               <Button 
                 size="large"
+                LinkComponent={Link}
+                href='https://www.linkedin.com/in/uuche-ike/'
                 sx={{bgcolor: "#990000", color: "#FFFFFF"}}>
                 LinkedIn
               </Button>
@@ -87,7 +90,7 @@ export default function Homepage() {
         </Typography>
         <Typography 
           variant="body1" 
-          align="center">
+          align="center">S
         Hi, my name is Uche. I am a software engineer, passionate about game design and game development. 
         I believe games are a powerful medium for conveying resonating experiences to players through well-crafted story,
          mechanics, and aesthetics. I love analyzing and creating games that transport users into different worlds.
@@ -103,7 +106,13 @@ export default function Homepage() {
         justifyContent="flex-start"
         alignItems="center">
         <Typography variant="h4" sx={{flexGrow: 1, marginBottom: 2, fontWeight: 'bold'}}>Latest Blogs</Typography>
-        <Typography variant="h5" sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>See All</Typography>
+        <Typography 
+          variant="h5" 
+          component={Link}
+          href="/blogs"
+          sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>
+            See All
+          </Typography>
       </Stack>
       <Stack   
         direction="row"
@@ -113,6 +122,8 @@ export default function Homepage() {
           title="From Megman X to Zero: Leveling Up and Falling Short"
           subheader="June 3rd, 2024"
           imageURL={basePath + "/images/MaverickHunterX.png"}
+          component={Link}
+          href="/blog/megaman-x-vs-zero"
           imageAlt={"From Megman X to Zero Thumbnail"}>
             Analysis of Megaman X and Megaman Zero games
         </ContentCard>
