@@ -120,7 +120,7 @@ export default function Homepage() {
         alignItems="center">
         <ContentCard
           title="From Megman X to Zero: Leveling Up Yet Falling Short"
-          subheader="June 3rd, 2024"
+          subheader="June 10th, 2024"
           imageURL={basePath + "/images/MegamanXVsZero.png"}
           href="/blog/megaman-x-vs-zero"
           imageAlt={"From Megman X to Zero Thumbnail"}>

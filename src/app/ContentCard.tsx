@@ -13,11 +13,13 @@ interface ContentCardProps {
     imageAlt: string,
     children: string,
     href?: string,
+    className?: string
 };
 
-function ContentCard({title, subheader, imageURL, imageAlt, href, children }: ContentCardProps) {
+function ContentCard({title, subheader, imageURL, imageAlt, href, className, children }: ContentCardProps) {
     return (
         <Card 
+        className={className}
         elevation={0}
         component={Link}
         href={href || ""}>

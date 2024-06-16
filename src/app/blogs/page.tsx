@@ -19,29 +19,15 @@ export default function Blogs() {
                 </Typography>
                 {/**Using CSS grids cause MUI's grid suck */}
                 <div className="grid-container">
-                    <Card className="featured-item"
-                        elevation={0}
-                        component={Link}
+                    <ContentCard
+                        className = "featured-item"
+                        title="From Megman X to Zero: Leveling Up Yet Falling Short"
+                        subheader="June 10th, 2024"
+                        imageURL={basePath + "/images/MegamanXVsZero.png"}
                         href="/blog/megaman-x-vs-zero"
-                        >
-                        <CardActionArea>
-                            <CardHeader
-                                title="From Megman X to Zero: Leveling Up Yet Falling Short"
-                                subheader="June 3rd, 2024"
-                                />
-                            <CardMedia
-                                component="img"
-                                height="194"
-                                image={basePath + "/images/MegamanXvsZero.png"}
-                                alt="Megaman X vs Zero thumbnail"
-                                />
-                            <CardContent>
-                                <Typography variant="body2" color="text.secondary">
-                                    Analysis of Megaman X and Megaman Zero games
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
+                        imageAlt={"From Megman X to Zero Thumbnail"}>
+                            Analysis of Megaman X and Megaman Zero games
+                    </ContentCard>
                 </div>
             </Stack>
         </Paper>
