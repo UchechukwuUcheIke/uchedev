@@ -1,4 +1,4 @@
-import Markdown from 'react-markdown'
+
 import fs from 'fs';
 import path from 'path';
 import {Box, Stack } from '@mui/material';
@@ -8,7 +8,7 @@ export default function Article() {
   const basePath = process.env.BASE_PATH
   return (
     <Fragment>
-      
+      {/*
       <Markdown>{header}</Markdown>
       <Box
       component="img"
@@ -102,6 +102,7 @@ export default function Article() {
       src={basePath + "/assets/blogs/megaman-x-vs-zero/serges_bossfight.png"}
       />
     <Markdown>{eighthSection}</Markdown>
+    */}
     </Fragment>
   )
 }
