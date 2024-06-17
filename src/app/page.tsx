@@ -1,16 +1,48 @@
-import { Metadata } from 'next'
+'use client';
+
+//import { Metadata } from 'next'
+import { useState, useEffect } from 'react'
 import {Divider, Typography, Stack, Box, Paper,  Button} from '@mui/material';
 import ContentCard from './ContentCard'
 import Link from "next/link";
 import Image from 'next/image'
 
+import Fade from '@mui/material/Fade';
+import Collapse from '@mui/material/Collapse';
+
+/**
 export const metadata: Metadata = {
   title: 'Uchedev',
 }
+   */
 
 export default function Homepage() {
   // accessing the basepath through env variable so images appear when website is deployed
-  const basePath = process.env.BASE_PATH
+  const [checked, setChecked] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+  const [checked3, setChecked3] = useState(false);
+
+  function playAnimation() {
+    setTimeout(() => {
+      setChecked(true);
+    }, 1000)
+    setTimeout(() => {
+      setChecked2(true);
+    }, 2000)
+    setTimeout(() => {
+      setChecked3(true);
+    }, 3000)
+    
+  }
+
+  useEffect(() => {
+    playAnimation();
+    return () => {
+      // Do something when component is unmounted
+    };
+  }, []);
+
+  const basePath = process.env.BASE_PATH // TODO: Consider getting rid of this;
   return (
     <Stack 
       direction="column"
@@ -29,21 +61,28 @@ export default function Homepage() {
             justifyContent="flex-end"
             alignItems="flex-start"
             sx={{ flexGrow: 1}}>
-            <Typography 
-              variant="h1" 
-              sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-              Hi, I&apos;m Uche
-            </Typography>
-            <Typography 
-              variant="h2" 
-              sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-              and I&apos;m a
-            </Typography>
-            <Typography 
-              variant="h2" 
-              sx={{ color: "#FFFFFF", fontWeight: "bold" }}>
-              Game <span style={{color: "#990000"}}>Developer</span>
-            </Typography>
+            {/*TODO: For the love of all that is holy, think up better names"*/}
+            <Fade in={checked}>
+              <Typography 
+                variant="h1" 
+                sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
+                Hi, I&apos;m Uche
+              </Typography>
+            </Fade>
+            <Fade in={checked2}>
+              <Typography 
+                variant="h2" 
+                sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
+                and I&apos;m a
+              </Typography>
+            </Fade>
+            <Collapse in={checked3}>
+              <Typography 
+                variant="h2" 
+                sx={{ color: "#FFFFFF", fontWeight: "bold" }}>
+                Game <span style={{color: "#990000"}}>Developer</span>
+              </Typography>
+            </Collapse>
             <Stack 
               direction="row" 
               spacing={2} 
@@ -90,7 +129,7 @@ export default function Homepage() {
         </Typography>
         <Typography 
           variant="body1" 
-          align="center">S
+          align="center">
         Hi, my name is Uche. I am a software engineer, passionate about game design and game development. 
         I believe games are a powerful medium for conveying resonating experiences to players through well-crafted story,
          mechanics, and aesthetics. I love analyzing and creating games that transport users into different worlds.
