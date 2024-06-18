@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import "./page.css"
 import {Button, Typography, Stack, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea} from '@mui/material';
 import Link from "next/link";
-import ContentCard from '../ContentCard';
+import ContentCard from '../../Components/ContentCard';
 
 export const metadata: Metadata = {
   title: 'Uchedev',

@@ -3,9 +3,12 @@
 //import { Metadata } from 'next'
 import { useState, useEffect } from 'react'
 import {Divider, Typography, Stack, Box, Paper,  Button} from '@mui/material';
-import ContentCard from './ContentCard'
+import ContentCard from '../Components/ContentCard'
 import Link from "next/link";
 import Image from 'next/image'
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FileOpenIcon from '@mui/icons-material/FileOpen';
 
 import Fade from '@mui/material/Fade';
 import Collapse from '@mui/material/Collapse';
@@ -89,14 +92,20 @@ export default function Homepage() {
               sx={{flexGrow: 1, marginTop: 10, marginBottom: 2}}>
               <Button 
                 size="large"
+                color='secondary'
                 LinkComponent={Link}
+                variant="outlined"
                 href='https://www.linkedin.com/in/uuche-ike/'
-                sx={{bgcolor: "#990000", color: "#FFFFFF"}}>
+                startIcon={<LinkedInIcon />}
+                sx={{bgcolor: "#525c54", color: "#FFFFFF"}}>
                 LinkedIn
               </Button>
               <Button 
                 size="large"
-                sx={{bgcolor: "#990000", color: "#FFFFFF"}} >
+                color='secondary'
+                variant="outlined"
+                startIcon={<FileOpenIcon />}
+                sx={{bgcolor: "#525c54", color: "#FFFFFF"}} >
                 Resume
               </Button>
             </Stack>
