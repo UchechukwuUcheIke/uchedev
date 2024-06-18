@@ -42,7 +42,7 @@ export default function Homepage() {
     };
   }, []);
 
-  const basePath = process.env.BASE_PATH // TODO: Consider getting rid of this;
+  const basePath = process.env.BASE_PATH || "" // TODO: Consider getting rid of this;
   return (
     <Stack 
       direction="column"
@@ -151,7 +151,7 @@ export default function Homepage() {
           href="/blogs"
           sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>
             See All
-          </Typography>
+        </Typography>
       </Stack>
       <Stack   
         direction="row"
@@ -174,7 +174,13 @@ export default function Homepage() {
         justifyContent="flex-start"
         alignItems="center">
         <Typography variant="h4" sx={{flexGrow: 1, marginBottom: 2, fontWeight: 'bold'}}>Latest Projects</Typography>
-        <Typography variant="h5" sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>See All</Typography>
+        <Typography 
+          variant="h5"
+          component={Link}
+          href="/projects" 
+          sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>
+            See All
+        </Typography>
     </Stack>
     <Stack
       direction="row"
@@ -185,7 +191,8 @@ export default function Homepage() {
           title="Maverick Hunter X"
           subheader="June 1st, 2024"
           imageURL={basePath + "/images/MaverickHunterX.png"}
-          imageAlt={"Maverick Hunter X Logo"}>
+          imageAlt={"Maverick Hunter X Logo"}
+          href='/projects/maverick-hunter-x'>
             A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
       </ContentCard>
     </Stack>
