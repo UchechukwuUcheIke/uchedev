@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react'
 import {Divider, Typography, Stack, Box, Paper,  Button} from '@mui/material';
 import ContentCard from '../Components/ContentCard'
 import Link from "next/link";
+import Typewriter from '@/Components/Typewriter';
+import JobTitle from '@/Components/JobTitle';
 import Image from 'next/image'
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FileOpenIcon from '@mui/icons-material/FileOpen';
 
 import Fade from '@mui/material/Fade';
-import Collapse from '@mui/material/Collapse';
 
 /**
 export const metadata: Metadata = {
@@ -20,22 +21,10 @@ export const metadata: Metadata = {
    */
 
 export default function Homepage() {
-  // accessing the basepath through env variable so images appear when website is deployed
   const [checked, setChecked] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  const [checked3, setChecked3] = useState(false);
 
   function playAnimation() {
-    setTimeout(() => {
-      setChecked(true);
-    }, 1000)
-    setTimeout(() => {
-      setChecked2(true);
-    }, 2000)
-    setTimeout(() => {
-      setChecked3(true);
-    }, 3000)
-    
+    setChecked(true);
   }
 
   useEffect(() => {
@@ -64,28 +53,25 @@ export default function Homepage() {
             justifyContent="flex-end"
             alignItems="flex-start"
             sx={{ flexGrow: 1}}>
-            {/*TODO: For the love of all that is holy, think up better names"*/}
-            <Fade in={checked}>
-              <Typography 
-                variant="h1" 
-                sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-                Hi, I&apos;m Uche
-              </Typography>
-            </Fade>
-            <Fade in={checked2}>
-              <Typography 
-                variant="h2" 
-                sx={{ color: "#EEEEEE", fontWeight: "bold" }}>
-                and I&apos;m a
-              </Typography>
-            </Fade>
-            <Collapse in={checked3}>
-              <Typography 
-                variant="h2" 
-                sx={{ color: "#FFFFFF", fontWeight: "bold" }}>
-                Game <span style={{color: "#990000"}}>Developer</span>
-              </Typography>
-            </Collapse>
+              <Typewriter
+                variant='h3'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={false}>
+                Hi, I&apos;m Uche</Typewriter>
+              <Typewriter
+                variant='h3'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={false}>
+                and I&apos;m a</Typewriter>
+              <JobTitle
+                variant='h2'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={false}>
+                Game
+              </JobTitle>
             <Stack 
               direction="row" 
               spacing={2} 
@@ -104,6 +90,7 @@ export default function Homepage() {
                 size="large"
                 color='secondary'
                 variant="outlined"
+                href='https://docs.google.com/document/d/1FPh5hAwIeWYqUvfYuOX1LDHpppEgie1vvl2xVBitVac/edit?usp=sharing'
                 startIcon={<FileOpenIcon />}
                 sx={{bgcolor: "#525c54", color: "#FFFFFF"}} >
                 Resume
@@ -158,7 +145,13 @@ export default function Homepage() {
           variant="h5" 
           component={Link}
           href="/blogs"
-          sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>
+          sx={{            
+            fontWeight: 'bold',
+            color: '#990000', 
+            '&:visited': {
+              color: '#990000'
+            }
+          }}>
             See All
         </Typography>
       </Stack>
@@ -187,7 +180,14 @@ export default function Homepage() {
           variant="h5"
           component={Link}
           href="/projects" 
-          sx={{marginBottom: 2, fontWeight: 'bold', color: "#990000"}}>
+          sx={{
+            marginBottom: 2, 
+            fontWeight: 'bold',
+            color: '#990000', 
+            '&:visited': {
+              color: '#990000'
+            },
+          }}>
             See All
         </Typography>
     </Stack>
