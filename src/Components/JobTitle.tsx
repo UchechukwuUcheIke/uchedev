@@ -2,54 +2,54 @@
 import { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
+import Typewriter from './Typewriter';
 
 //TODO: Uses more or less the same code from Typewriter; we should rewrite this to avoid reused code
-const JobTitle = ({ delay, variant, textColor, infinite, children }) => {
-    const [currentText, setCurrentText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
+const JobTitle = ({}) => {
+    const [firstChecked, setFirstChecked] = useState(false);
+    const [secondChecked, setSecondChecked] = useState(false);
+    const [thirdChecked, setThirdChecked] = useState(false);
+
+    // I'm not gonna front, I'm hardcoding this
     useEffect(() => {
-      let timeout = infinite
-  
-      if (currentIndex < children.length) {
-        timeout = setTimeout(() => {
-          setCurrentText(prevText => prevText + children[currentIndex]);
-          setCurrentIndex(prevIndex => prevIndex + 1);
-        }, delay);
-  
-      } else if (infinite) { // ADD THIS CHECK
-        setCurrentIndex(0);
-        setCurrentText('');
-      }
+      let timeout = undefined
+      setFirstChecked(true)
+      timeout = setTimeout(function(){ setSecondChecked(true) }, 2000);
+      timeout = setTimeout(function(){ setThirdChecked(true) }, 4000);
+
       return () => clearTimeout(timeout);
-    }, [currentIndex, delay, infinite, children]);
+    }, []);
   
     return (
       <>
-      <Typography
-        variant={variant}
-        display='inline'
-        sx={{ color: textColor, fontWeight: "bold", display: 'inline-block'}}>
-        {currentText} 
-        <Typography variant='h2' component="span"
-                  sx={{color: "#990000", fontWeight: "bold"}}>
-                      Developer
-                  </Typography>
-        <Collapse
-              orientation="horizontal"
-              component='div'
-              in={currentText == children}
-              {...(currentText == children ? { timeout: 2000 } : {})}
-              style={{ transitionDelay: currentText == children ? '500ms' : '0ms' }}>
-
-                  <Typography variant='h2' component="span" display='inline'
-                  sx={{color: "#990000", fontWeight: "bold"}}>
-                      Developer
-                  </Typography>
-        </Collapse>
-      </Typography>
-      
-
+              <Typewriter
+                variant='h2'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={!firstChecked}>
+                Hi, I&apos;m Uche
+              </Typewriter>
+              <Typewriter
+                variant='h2'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={!secondChecked}>
+                and I&apos;m a
+              </Typewriter>
+              <Collapse
+                orientation="horizontal"
+                component='span'
+                in={thirdChecked}
+                {...(thirdChecked ? { timeout: 2000 } : {})}>
+                <Typography 
+                  variant='h2' 
+                  component="span" 
+                  display='inline'
+                  sx={{color: "#EEEEEE", fontWeight: "bold"}}>
+                  {/*I'm using this weird ass symbol because the collapse splits the words otherwise*/}
+                  Game&nbsp;<span style={{color: "#990000"}}>Developer</span>
+                </Typography>
+              </Collapse>   
       </>);
   };
   

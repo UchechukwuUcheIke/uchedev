@@ -1,0 +1,75 @@
+ <Stack
+        direction="row"
+        justifyContent="center"
+        alignItems="flex-end"
+        spacing={2}>
+          <Stack 
+            direction="column"
+            justifyContent="center"
+            alignItems="flex-start"
+            sx={{ flexGrow: 1}}>
+              <Typewriter
+                variant='h3'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={false}>
+                Hi, I&apos;m Uche</Typewriter>
+              <Typewriter
+                variant='h3'
+                delay={100}
+                textColor={"#EEEEEE"}
+                infinite={false}>
+                and I&apos;m a</Typewriter>
+              <Collapse
+                orientation="horizontal"
+                component='div'
+                in={checked}
+                {...(checked ? { timeout: 2000 } : {})}>
+                <Typography 
+                  variant='h2' 
+                  component="span" 
+                  display='inline'
+                  sx={{color: "#990000", fontWeight: "bold"}}>
+                  Game Developer
+                </Typography>
+              </Collapse>
+
+            <Stack 
+              direction="row" 
+              spacing={2} 
+              sx={{flexGrow: 1, marginTop: 10, marginBottom: 2}}>
+              <Button 
+                size="large"
+                color='secondary'
+                LinkComponent={Link}
+                variant="outlined"
+                href='https://www.linkedin.com/in/uuche-ike/'
+                startIcon={<LinkedInIcon />}
+                sx={{bgcolor: "#525c54", color: "#FFFFFF"}}>
+                LinkedIn
+              </Button>
+              <Button 
+                size="large"
+                color='secondary'
+                variant="outlined"
+                href='https://docs.google.com/document/d/1FPh5hAwIeWYqUvfYuOX1LDHpppEgie1vvl2xVBitVac/edit?usp=sharing'
+                startIcon={<FileOpenIcon />}
+                sx={{bgcolor: "#525c54", color: "#FFFFFF"}} >
+                Resume
+              </Button>
+            </Stack>
+          </Stack>
+          {/* Using Box with image component as a placeholder for MUI Image */}
+          {/* Look into replacing the Box with Next.js' Image component */}
+          <Box
+            component="img"
+            sx={{
+              height: 500,
+              width: 500,
+              flexGrow: 0,
+            }}
+            alt="Portrait of Uche"
+            src={basePath + "/images/portrait.png"}
+          />
+          
+        </Stack>

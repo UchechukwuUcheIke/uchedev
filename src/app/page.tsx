@@ -8,6 +8,7 @@ import Link from "next/link";
 import Typewriter from '@/Components/Typewriter';
 import JobTitle from '@/Components/JobTitle';
 import Image from 'next/image'
+import Collapse from '@mui/material/Collapse';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FileOpenIcon from '@mui/icons-material/FileOpen';
@@ -21,10 +22,16 @@ export const metadata: Metadata = {
    */
 
 export default function Homepage() {
+  // I know this is bad, but idgaf atm
   const [checked, setChecked] = useState(false);
+  const [secondChecked, setSecondChecked] = useState(false);
 
   function playAnimation() {
     setChecked(true);
+    setTimeout(() => {
+      setSecondChecked(true);
+    }, 3000);
+    
   }
 
   useEffect(() => {
@@ -44,34 +51,37 @@ export default function Homepage() {
         elevation={0} 
         sx={{paddingX: 5, bgcolor: "#525c54"}}>
         <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="flex-end"
-        spacing={2}>
+          direction="row"
+          justifyContent="center"
+          alignItems="flex-end"
+          spacing={2}>
           <Stack 
             direction="column"
-            justifyContent="flex-end"
-            alignItems="flex-start"
+            justifyContent="center"
+            alignItems="stretch"
             sx={{ flexGrow: 1}}>
               <Typewriter
                 variant='h3'
                 delay={100}
                 textColor={"#EEEEEE"}
-                infinite={false}>
-                Hi, I&apos;m Uche</Typewriter>
-              <Typewriter
-                variant='h3'
-                delay={100}
-                textColor={"#EEEEEE"}
-                infinite={false}>
-                and I&apos;m a</Typewriter>
-              <JobTitle
-                variant='h2'
-                delay={100}
-                textColor={"#EEEEEE"}
-                infinite={false}>
-                Game
-              </JobTitle>
+                infinite={!checked}>
+                Hi, I&apos;m Uche and I&apos;m a
+              </Typewriter>
+              <Collapse
+                orientation="horizontal"
+                component='span'
+                in={secondChecked}
+                {...(secondChecked ? { timeout: 2000 } : {})}>
+                <Typography 
+                  variant='h1' 
+                  component="span" 
+                  display='inline'
+                  sx={{color: "#EEEEEE", fontWeight: "bold"}}>
+                  {/*I'm using this weird ass symbol because the collapse splits the words otherwise*/}
+                  Game&nbsp;<span style={{color: "#990000"}}>Developer</span>
+                </Typography>
+              </Collapse>
+
             <Stack 
               direction="row" 
               spacing={2} 
@@ -103,8 +113,8 @@ export default function Homepage() {
             component="img"
             sx={{
               height: 500,
-              width: 300,
-              flexGrow: 1,
+              width: 500,
+              flexGrow: 0,
             }}
             alt="Portrait of Uche"
             src={basePath + "/images/portrait.png"}
