@@ -16,7 +16,7 @@ interface ContentCardProps {
     className?: string
 };
 
-const ContentCard = forwardRef((props : ContentCardProps, ref) => {
+const ContentCard = forwardRef(function ContentCard(props : ContentCardProps, ref) {
     let {title, subheader, imageURL, imageAlt, href, className, children } = props
     return (
         <Card 

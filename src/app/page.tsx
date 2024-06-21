@@ -130,7 +130,7 @@ export default function Homepage() {
                 orientation="horizontal"
                 component='span'
                 in={secondChecked}
-                {...(checked ? { timeout: 1000 } : {})}>
+                {...(secondChecked ? { timeout: 1000 } : {})}>
                 <Typography 
                   variant='h1' 
                   component="span" 
@@ -179,11 +179,13 @@ export default function Homepage() {
                 top: 0,
                 left: 0,
                 objectFit: 'cover',
-                zIndex: 1,
+                zIndex: 2,
               }}
               alt="Portrait of Uche"
-              src={basePath + "/images/portrait.png"}
+              src={basePath + "/images/PortraitHeadshotOnly.png"}
             />
+            <Fade
+            in={secondChecked}>
             <Box
               component="img"
               sx={{
@@ -196,9 +198,11 @@ export default function Homepage() {
                 zIndex: 1,
               }}
               alt="Portrait of Uche"
-              src={basePath + "/images/portrait.png"}
+              src={basePath + "/images/PortraitFlameOnly.png"}
             />
+            </Fade>
           </Box>
+          
         </Stack>
 
       </Paper>
