@@ -1,19 +1,22 @@
 'use client';
 
 //import { Metadata } from 'next'
-import { useState, useEffect } from 'react'
-import {Divider, Typography, Stack, Box, Paper,  Button} from '@mui/material';
+import { useState, useEffect, useRef } from 'react'
+import {Divider, Typography, Stack, Box, Paper,  Button, Card} from '@mui/material';
 import ContentCard from '../Components/ContentCard'
 import Link from "next/link";
 import Typewriter from '@/Components/Typewriter';
 import JobTitle from '@/Components/JobTitle';
 import Image from 'next/image'
 import Collapse from '@mui/material/Collapse';
+import Grow from '@mui/material/Grow';
+import Zoom from '@mui/material/Zoom';
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FileOpenIcon from '@mui/icons-material/FileOpen';
 
 import Fade from '@mui/material/Fade';
+import { profileEnd } from 'console';
 
 /**
 export const metadata: Metadata = {
@@ -22,6 +25,13 @@ export const metadata: Metadata = {
    */
 
 export default function Homepage() {
+  const [blogsInView, setBlogsInView] = useState(false);
+  const [projectsInView, setProjectsInView] = useState(false);
+  // Ref used to track visibility of blogs
+  const blogsRef = useRef();
+  // Ref used to track visibility of projects
+  const projectsRef = useRef();
+
   // I know this is bad, but idgaf atm
   const [checked, setChecked] = useState(false);
   const [secondChecked, setSecondChecked] = useState(false);
@@ -36,8 +46,46 @@ export default function Homepage() {
 
   useEffect(() => {
     playAnimation();
+
+    //TODO: Reduce the amount of repeating code here
+    //https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API would serve you well
+    const blogsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setBlogsInView(true);
+          blogsObserver.disconnect();
+        }
+      }
+      ,
+      {
+        threshold: 0.9, // Trigger when 10% of the element is visible
+      }
+    );
+
+    const projectsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target)
+          setProjectsInView(true);
+          blogsObserver.disconnect();
+        }
+      }
+      ,
+      {
+        threshold: 0.9, // Trigger when 10% of the element is visible
+      }
+    );
+
+    if (blogsRef.current) {
+      blogsObserver.observe(blogsRef.current);
+    }
+    if (projectsRef.current) {
+      projectsObserver.observe(projectsRef.current);
+    }
+
     return () => {
       // Do something when component is unmounted
+      blogsObserver.disconnect();
     };
   }, []);
 
@@ -168,15 +216,19 @@ export default function Homepage() {
       <Stack   
         direction="row"
         justifyContent="flex-start"
-        alignItems="center">
-        <ContentCard
-          title="From Megman X to Zero: Leveling Up Yet Falling Short"
-          subheader="June 10th, 2024"
-          imageURL={basePath + "/images/MegamanXVsZero.png"}
-          href="/blog/megaman-x-vs-zero"
-          imageAlt={"From Megman X to Zero Thumbnail"}>
-            Analysis of Megaman X and Megaman Zero games
-        </ContentCard>
+        alignItems="center"
+        spacing={2}>
+          <Zoom ref={blogsRef} in={blogsInView}>
+            <ContentCard
+              title="From Megman X to Zero: Leveling Up Yet Falling Short"
+              subheader="June 10th, 2024"
+              imageURL={basePath + "/images/MegamanXVsZero.png"}
+              href="/blog/megaman-x-vs-zero"
+              imageAlt={"From Megman X to Zero Thumbnail"}>
+              Analysis of Megaman X and Megaman Zero games.
+            </ContentCard>
+          </Zoom>
+
       </Stack>
     </Paper>
     <Divider orientation="horizontal" variant="middle" flexItem />
@@ -206,14 +258,16 @@ export default function Homepage() {
       justifyContent="flex-start"
       alignItems="center"
       spacing={2}>
-      <ContentCard
-          title="Maverick Hunter X"
-          subheader="June 1st, 2024"
-          imageURL={basePath + "/images/MaverickHunterX.png"}
-          imageAlt={"Maverick Hunter X Logo"}
-          href='/projects/maverick-hunter-x'>
-            A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
-      </ContentCard>
+      <Zoom ref={projectsRef} in={projectsInView}>
+        <ContentCard
+            title="Maverick Hunter X"
+            subheader="June 1st, 2024"
+            imageURL={basePath + "/images/MaverickHunterX.png"}
+            imageAlt={"Maverick Hunter X Logo"}
+            href='/projects/maverick-hunter-x'>
+              A 2.5D retelling of the Megaman X storyline with improved visuals, gameplay, and atmosphere.
+        </ContentCard>
+      </Zoom>
     </Stack>
     </Paper>
     

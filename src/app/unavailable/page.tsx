@@ -4,16 +4,28 @@ import HomeIcon from '@mui/icons-material/Home';
 //TODO: Finish styling on this page
 export default function UnavailableContentPage() {
     return (
-        <Paper sx={{height: '100%'}}>
+        <Paper elevation={0} sx={{paddingTop: '10%'}}>
             <Stack
             direction="column"
             justifyContent="center"
             alignItems="center"
-            spacing={5}>
-                <Typography> Coming Soon </Typography>
-                <Typography> This page is still underconstruction </Typography>
-                <Typography> Feel free to check out the rest of the website! </Typography>
+            spacing={2}>
+                <Typography
+                variant="h1" 
+                gutterBottom
+                sx={{fontWeight: 'bold', color: "#990000"}}> 
+                    Coming Soon 
+                </Typography>
+                <Typography
+                variant="h5"> 
+                    This page is still under construction 
+                </Typography>
+                <Typography
+                variant="h5"> 
+                    But feel free to check out the rest of the website! 
+                </Typography>
                 <Button
+                size="large"
                 startIcon={<HomeIcon/>}> 
                     Home 
                 </Button>
