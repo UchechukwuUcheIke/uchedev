@@ -5,8 +5,6 @@ import { useState, useEffect, useRef } from 'react'
 import {Divider, Typography, Stack, Box, Paper,  Button, Card} from '@mui/material';
 import ContentCard from '../Components/ContentCard'
 import Link from "next/link";
-import Typewriter from '@/Components/Typewriter';
-import JobTitle from '@/Components/JobTitle';
 import Image from 'next/image'
 import Collapse from '@mui/material/Collapse';
 import Grow from '@mui/material/Grow';
@@ -40,8 +38,7 @@ export default function Homepage() {
     setChecked(true);
     setTimeout(() => {
       setSecondChecked(true);
-    }, 3000);
-    
+    }, 2000);
   }
 
   useEffect(() => {
@@ -108,18 +105,32 @@ export default function Homepage() {
             justifyContent="center"
             alignItems="stretch"
             sx={{ flexGrow: 1}}>
-              <Typewriter
-                variant='h3'
-                delay={100}
-                textColor={"#EEEEEE"}
-                infinite={!checked}>
-                Hi, I&apos;m Uche and I&apos;m a
-              </Typewriter>
+              <Fade in={checked}
+              >
+                <Typography 
+                  variant='h2' 
+                  component="span" 
+                  display='inline'
+                  sx={{color: "#EEEEEE", fontWeight: "bold"}}>
+                  Hi, I&apos;m Uche 
+                </Typography>
+              </Fade>
+              <Fade in={checked}
+              style={{ transitionDelay: checked ? '1000ms' : '0ms' }}>
+                <Typography 
+                  variant='h2' 
+                  component="span" 
+                  display='inline'
+                  sx={{color: "#EEEEEE", fontWeight: "bold"}}
+                  >
+                  and I&apos;m a
+                </Typography>
+              </Fade>
               <Collapse
                 orientation="horizontal"
                 component='span'
                 in={secondChecked}
-                {...(secondChecked ? { timeout: 2000 } : {})}>
+                {...(checked ? { timeout: 1000 } : {})}>
                 <Typography 
                   variant='h1' 
                   component="span" 
@@ -157,17 +168,37 @@ export default function Homepage() {
           </Stack>
           {/* Using Box with image component as a placeholder for MUI Image */}
           {/* Look into replacing the Box with Next.js' Image component */}
-          <Box
-            component="img"
-            sx={{
-              height: 500,
-              width: 500,
-              flexGrow: 0,
-            }}
-            alt="Portrait of Uche"
-            src={basePath + "/images/portrait.png"}
-          />
-          
+          <Box sx={{ position: 'relative', width: '500px', height: '500px', flexGrow: 0 }}>
+            {/* */}
+            <Box
+              component="img"
+              sx={{
+                position: 'absolute',
+                height: 500,
+                width: 500,
+                top: 0,
+                left: 0,
+                objectFit: 'cover',
+                zIndex: 1,
+              }}
+              alt="Portrait of Uche"
+              src={basePath + "/images/portrait.png"}
+            />
+            <Box
+              component="img"
+              sx={{
+                position: 'absolute',
+                height: 500,
+                width: 500,
+                top: 0,
+                left: 0,
+                objectFit: 'cover',
+                zIndex: 1,
+              }}
+              alt="Portrait of Uche"
+              src={basePath + "/images/portrait.png"}
+            />
+          </Box>
         </Stack>
 
       </Paper>
