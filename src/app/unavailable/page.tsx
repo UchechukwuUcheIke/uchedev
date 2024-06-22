@@ -1,5 +1,6 @@
 import {Stack, Paper, Typography, Button} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import Link from 'next/link';
 
 //TODO: Finish styling on this page
 export default function UnavailableContentPage() {
@@ -26,6 +27,8 @@ export default function UnavailableContentPage() {
                 </Typography>
                 <Button
                 size="large"
+                href="/"
+                LinkComponent={Link}
                 startIcon={<HomeIcon/>}> 
                     Home 
                 </Button>

@@ -18,15 +18,15 @@ interface ContentCardProps {
     className?: string
 };
 
-const ContentCard = forwardRef(function ContentCard(props : ContentCardProps, ref) {
-    let {title, subheader, imageURL, imageAlt, href, className, children } = props
+const ContentCard = forwardRef<HTMLDivElement, ContentCardProps>(function ContentCard(props : ContentCardProps, ref) {
+    let {title, subheader, imageURL, imageAlt, href, className, children, ...otherProps } = props
     return (
         <Card 
         ref={ref}
-        {...props}
+        {...otherProps}
         className={className}
         elevation={0}
-        component={Link}
+        component={href ? Link : 'div'}
         href={href || ""}>
         <CardActionArea>
             <CardHeader
