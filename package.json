@@ -18,6 +18,8 @@
     "@emotion/styled": "^11.11.5",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "@mui/material-nextjs": "^5.15.11",
     "@next/mdx": "^14.2.4",
     "@types/mdx": "^2.0.13",

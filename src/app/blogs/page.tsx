@@ -1,8 +1,7 @@
 import { Metadata } from 'next'
 import "./page.css"
-import {Button, Typography, Stack, Paper, Card, CardHeader, CardMedia, CardContent, CardActionArea} from '@mui/material';
-import Link from "next/link";
-import ContentCard from '../ContentCard';
+import {Typography, Stack, Paper} from '@mui/material';
+import ContentCard from '../../Components/ContentCard';
 
 export const metadata: Metadata = {
   title: 'Uchedev',
@@ -10,6 +9,7 @@ export const metadata: Metadata = {
 
 
 export default function Blogs() {
+
     const basePath = process.env.BASE_PATH
     return (
         <Paper component="main" sx={{padding: 2 }}>
@@ -19,15 +19,15 @@ export default function Blogs() {
                 </Typography>
                 {/**Using CSS grids cause MUI's grid suck */}
                 <div className="grid-container">
-                    <ContentCard
-                        className = "featured-item"
-                        title="From Megman X to Zero: Leveling Up Yet Falling Short"
-                        subheader="June 10th, 2024"
-                        imageURL={basePath + "/images/MegamanXVsZero.png"}
-                        href="/blog/megaman-x-vs-zero"
-                        imageAlt={"From Megman X to Zero Thumbnail"}>
-                            Analysis of Megaman X and Megaman Zero games
-                    </ContentCard>
+                        <ContentCard
+                            className = "featured-item"
+                            title="From Megman X to Zero: Leveling Up Yet Falling Short"
+                            subheader="June 10th, 2024"
+                            imageURL={basePath + "/images/MegamanXVsZero.png"}
+                            href="/blog/megaman-x-vs-zero"
+                            imageAlt={"From Megman X to Zero Thumbnail"}>
+                                Analysis of Megaman X and Megaman Zero games
+                        </ContentCard>
                 </div>
             </Stack>
         </Paper>
