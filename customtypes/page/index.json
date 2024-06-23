@@ -21,6 +21,13 @@
           "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,rtl,o-list-item,preformatted"
         }
       },
+      "article_test2": {
+        "type": "Text",
+        "config": {
+          "label": "article_test2",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

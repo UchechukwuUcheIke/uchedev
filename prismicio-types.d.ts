@@ -22,6 +22,17 @@ interface PageDocumentData {
   article_test: prismic.RichTextField;
 
   /**
+   * article_test2 field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.article_test2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  article_test2: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
