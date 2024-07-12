@@ -253,6 +253,18 @@ export default function Homepage() {
         justifyContent="flex-start"
         alignItems="center"
         spacing={2}>
+
+          <Zoom ref={blogsRef} in={blogsInView}>
+            <ContentCard
+              title="Maverick Hunter X Announcement"
+              subheader="July 12th, 2024"
+              imageURL={basePath + ""}
+              href="/blog/maverick-hunter-x"
+              imageAlt={"MHX Announcement Thumbnail"}>
+                Announcement of indie project Maverick Hunter X
+            </ContentCard>
+          </Zoom>
+
           <Zoom ref={blogsRef} in={blogsInView}>
             <ContentCard
               title="From Megman X to Zero: Leveling Up Yet Falling Short"
@@ -263,7 +275,6 @@ export default function Homepage() {
               Analysis of Megaman X and Megaman Zero games.
             </ContentCard>
           </Zoom>
-
       </Stack>
     </Paper>
     <Divider orientation="horizontal" variant="middle" flexItem />

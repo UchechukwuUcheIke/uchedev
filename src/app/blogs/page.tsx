@@ -19,8 +19,18 @@ export default function Blogs() {
                 </Typography>
                 {/**Using CSS grids cause MUI's grid suck */}
                 <div className="grid-container">
+                        {/*TODO: Add a thumbnail to this blog story */}
                         <ContentCard
                             className = "featured-item"
+                            title="Maverick Hunter X Announcement"
+                            subheader="July 12th, 2024"
+                            imageURL={basePath + ""}
+                            href="/blog/maverick-hunter-x"
+                            imageAlt={"From Megman X to Zero Thumbnail"}>
+                                Announcement of indie project Maverick Hunter X
+                        </ContentCard>
+
+                        <ContentCard
                             title="From Megman X to Zero: Leveling Up Yet Falling Short"
                             subheader="June 10th, 2024"
                             imageURL={basePath + "/images/MegamanXVsZero.png"}
@@ -28,7 +38,9 @@ export default function Blogs() {
                             imageAlt={"From Megman X to Zero Thumbnail"}>
                                 Analysis of Megaman X and Megaman Zero games
                         </ContentCard>
+
                 </div>
+
             </Stack>
         </Paper>
     )
