@@ -24,7 +24,7 @@ export default function Blogs() {
                             className = "featured-item"
                             title="Maverick Hunter X Announcement"
                             subheader="July 12th, 2024"
-                            imageURL={basePath + ""}
+                            imageURL={basePath + "/images/MHXAnnouncementThumbnail.png"}
                             href="/blog/maverick-hunter-x"
                             imageAlt={"From Megman X to Zero Thumbnail"}>
                                 Announcement of indie project Maverick Hunter X
@@ -45,24 +45,3 @@ export default function Blogs() {
         </Paper>
     )
 }
-/**
- *                      <Card>
-                            <CardHeader
-                                title="Maverick Hunter X"
-                                subheader="June 1st, 2024"
-                                />
-                            <CardMedia
-                                component="img"
-                                height="194"
-                                image="../images/portrait.jpg"
-                                alt="Paella dish"
-                                />
-                            <CardContent>
-                                <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
-                                </Typography>
-                            </CardContent>
-                        </Card>
- */

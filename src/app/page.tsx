@@ -258,7 +258,7 @@ export default function Homepage() {
             <ContentCard
               title="Maverick Hunter X Announcement"
               subheader="July 12th, 2024"
-              imageURL={basePath + ""}
+              imageURL={basePath + "/images/MHXAnnouncementThumbnail.png"}
               href="/blog/maverick-hunter-x"
               imageAlt={"MHX Announcement Thumbnail"}>
                 Announcement of indie project Maverick Hunter X
