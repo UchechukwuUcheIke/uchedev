@@ -11,26 +11,15 @@ type PageDocumentDataSlicesSlice = never;
  */
 interface PageDocumentData {
   /**
-   * article_test field in *Page*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.article_test
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  article_test: prismic.RichTextField;
-
-  /**
-   * article_test2 field in *Page*
+   * article field in *Page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.article_test2
+   * - **API ID Path**: page.article
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  article_test2: prismic.KeyTextField;
+  article: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Page*

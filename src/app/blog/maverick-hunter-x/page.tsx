@@ -9,7 +9,7 @@ export default async function Article() {
 
   // Call the Prismic client right in your component!
   const page = await client.getByUID('page', 'maverick-hunter-x');
-  const contents = page.data.article_test2?.toString()
+  const contents = page.data.article?.toString()
   if (contents == null) {
     return <></>
   }
