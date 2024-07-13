@@ -159,7 +159,7 @@ export default function Homepage() {
                 size="large"
                 color='secondary'
                 variant="outlined"
-                href='https://docs.google.com/document/d/1FPh5hAwIeWYqUvfYuOX1LDHpppEgie1vvl2xVBitVac/edit?usp=sharing'
+                href='https://docs.google.com/document/d/1wY_XBHZSn8kD2WUSe5-UAW6Q5HE6MzSOwB38gggzZnI/edit?usp=sharing'
                 startIcon={<FileOpenIcon />}
                 sx={{bgcolor: "#525c54", color: "#FFFFFF"}} >
                 Resume
