@@ -19,8 +19,18 @@ export default function Blogs() {
                 </Typography>
                 {/**Using CSS grids cause MUI's grid suck */}
                 <div className="grid-container">
+                        {/*TODO: Add a thumbnail to this blog story */}
                         <ContentCard
                             className = "featured-item"
+                            title="Maverick Hunter X Announcement"
+                            subheader="July 12th, 2024"
+                            imageURL={basePath + "/images/MHXAnnouncementThumbnail.png"}
+                            href="/blog/maverick-hunter-x"
+                            imageAlt={"From Megman X to Zero Thumbnail"}>
+                                Announcement of indie project Maverick Hunter X
+                        </ContentCard>
+
+                        <ContentCard
                             title="From Megman X to Zero: Leveling Up Yet Falling Short"
                             subheader="June 10th, 2024"
                             imageURL={basePath + "/images/MegamanXVsZero.png"}
@@ -28,29 +38,10 @@ export default function Blogs() {
                             imageAlt={"From Megman X to Zero Thumbnail"}>
                                 Analysis of Megaman X and Megaman Zero games
                         </ContentCard>
+
                 </div>
+
             </Stack>
         </Paper>
     )
 }
-/**
- *                      <Card>
-                            <CardHeader
-                                title="Maverick Hunter X"
-                                subheader="June 1st, 2024"
-                                />
-                            <CardMedia
-                                component="img"
-                                height="194"
-                                image="../images/portrait.jpg"
-                                alt="Paella dish"
-                                />
-                            <CardContent>
-                                <Typography variant="body2" color="text.secondary">
-                                    This impressive paella is a perfect party dish and a fun meal to cook
-                                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                    if you like.
-                                </Typography>
-                            </CardContent>
-                        </Card>
- */
